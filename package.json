@@ -1,0 +1,14 @@
+{
+  "name": "30rock-vote",
+  "version": "1.0.0",
+  "description": "30 Rock voting app",
+  "dependencies": {
+	"express": "latest",
+	"mongoose": "latest",
+	"morgan": "latest",
+	"body-parser": "latest",
+	"cookie-parser": "latest",
+	"server-static": "latest",
+	"compression":"1.6.1"
+  }
+}
