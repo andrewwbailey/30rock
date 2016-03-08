@@ -1,12 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="30rockvote">
 <head>
 	<title>30 Rock - Results</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
 </head>
 <body>
-	<div class="jumbotron">
-		<h1>30 Rock Costume Contest</h1>
+	<div class="container">
+		<div class="jumbotron">
+			<h1>30 Rock Costume Contest</h1>
+		</div>
+
+		<div class="voteStage" ng-controller="VoteController as voteCtrl">
+			<form name="voteForm" ng-submit="voteForm.$valid && voteCtrl.addNewUser(setupCtrl.newUser)" role="form" novalidate>
+				<h3>What's your costume?</h3>
+				<input ng-model="voteCtrl.costumeName" ng-model-options="{ updateOn: 'blur' }" class="form-control" type="text" required="true"/>
+								
+				<br />
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form>
+		</div>
 	</div>
 </body>
 
