@@ -21,6 +21,6 @@ app.get('/results', function(req,res) {
 	res.sendfile('./public/results.html');
 });
 
-var server = app.listen(81, function() {
+var server = app.listen(80, function() {
 	console.log('Listening on port %d', server.address().port);
 });
